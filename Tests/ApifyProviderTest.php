@@ -82,4 +82,11 @@ final class ApifyProviderTest extends TestCase
         $this->expectException(NotSupportedException::class);
         $registry->pageFetch('apify');
     }
+
+    public function testItDeclaresNoPlans(): void
+    {
+        $this->expectException(\Omnicrawl\Exception\InvalidConfigException::class);
+        $this->expectExceptionMessage('declares no plans');
+        (new ApifyFactory(RecordedHttpClient::routes([]), new ArraySecrets(['KEY' => 'k'])))->create(['api_key' => 'KEY', 'user_agent' => self::UA, 'plan' => 'pro']);
+    }
 }
