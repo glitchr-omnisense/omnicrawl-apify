@@ -1,11 +1,14 @@
 {
     "name": "omnicrawl/apify",
     "type": "library",
-    "description": "Reserved, not released yet: Apify for omnisense/omnicrawl.",
+    "description": "Omnicrawl's Apify, under any PHP host: runs over a fixed set of addresses with the Cheerio Scraper actor (no link followed, one page at a time, no retry, no Apify proxy, robots.txt honoured by the actor too), the target's raw HTML, status and headers kept, behind omnicrawl's gate. Its limits and terms declared as data.",
     "keywords": [
-        "omnicrawl",
         "apify",
-        "reserved"
+        "cheerio-scraper",
+        "scraping",
+        "omnicrawl",
+        "responsible",
+        "framework-agnostic"
     ],
     "homepage": "https://github.com/glitchr-omnisense/omnicrawl-apify",
     "license": "MIT",
@@ -16,14 +19,32 @@
         }
     ],
     "require": {
-        "php": ">=8.2"
+        "php": ">=8.2",
+        "omnisense/contracts": "^1.0@dev",
+        "omnisense/omnicrawl": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.0"
     },
     "autoload": {
         "psr-4": {
             "Omnicrawl\\Apify\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnicrawl\\Apify\\Tests\\": "Tests/"
         }
     },
     "extra": {
+        "omnisense": {
+            "policy": "policy.json"
+        },
         "branch-alias": {
             "dev-1.x": "1.x-dev"
         }

@@ -1,0 +1,4 @@
+[
+  {"url": "https://archive.example.org/2025/report", "loadedUrl": "https://archive.example.org/2025/report", "status": 200, "headers": {"content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex"}, "body": "<html><head><title>Report 2025</title></head><body></body></html>"},
+  {"url": "https://archive.example.org/2024/report", "loadedUrl": "https://archive.example.org/2024/report", "status": 200, "headers": {"content-type": "text/html", "tdm-reservation": "1"}, "body": "<html><head><title>Report 2024</title></head><body></body></html>"}
+]

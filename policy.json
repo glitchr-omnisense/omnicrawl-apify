@@ -1,0 +1,33 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "apify",
+    "rateLimits": [
+        {
+            "max": 60,
+            "window": "second",
+            "note": "60 requests a second per API resource by default (400 a second to run an actor); 250,000 a minute per user overall. Over it Apify answers 429 rate-limit-exceeded, with no Retry-After documented: back off exponentially from 500 ms."
+        }
+    ],
+    "concurrency": null,
+    "rights": {
+        "commercial": "allowed",
+        "openSourceRequired": false,
+        "caching": {"permission": "unknown", "maxTtl": null},
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {"required": false, "text": null, "url": null, "where": []},
+        "licence": null
+    },
+    "requirements": {
+        "key": true,
+        "userAgent": {"required": false, "pattern": null}
+    },
+    "provenance": {
+        "terms": "https://docs.apify.com/legal/general-terms-and-conditions",
+        "policy": "https://docs.apify.com/legal/acceptable-use-policy",
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": "https://apify.com/contact",
+        "notes": "General terms effective 2026-07-09, for business use only. §5.8: the customer is solely responsible for the legality, accuracy, quality, appropriateness and use of all Customer Data; Apify may delete it after termination (§15.6). The acceptable use policy (2026-02-20) bans activities that contravene applicable laws or the rights of any third party, and putting an undue burden on any servers. Neither mentions robots.txt. Limits: https://docs.apify.com/api/v2 (rate limiting). Each run also costs compute units of the account's plan. Not used: Apify Proxy (residential or datacenter groups), retries, link following, sitemaps, browser actors."
+    }
+}
