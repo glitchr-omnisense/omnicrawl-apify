@@ -8,6 +8,13 @@ declaration, robots.txt read by the core, TDM reservations, the host's limits), 
 called after, and what it brings back is checked again and made a record with its provenance.
 Read [what omnicrawl refuses to do, and why](https://github.com/glitchr-omnisense/omnicrawl/blob/1.x/docs/refusals.md).
 
+```sh
+composer require omnisense/omnicrawl omnicrawl/apify symfony/http-client
+```
+
+It needs a Apify account and its API key (the `api_key` option); its tests run on recorded answers and need
+none. A first call with no account: omnicrawl's README (the recorded client, or its built-in `direct` provider).
+
 ```php
 $registry = new Registry([new ApifyFactory($http)], [
     'apify' => ['factory' => 'apify', 'options' => ['api_key' => 'APIFY_TOKEN']],
